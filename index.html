@@ -1,104 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Command Interface</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    h1 {
-      color: #333;
-    }
-    .container {
-      width: 90%;
-      max-width: 600px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .input-container {
-      display: flex;
-      margin-bottom: 20px;
-    }
-    input {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-right: 10px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-    .history {
-      max-height: 300px;
-      overflow-y: auto;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
-    }
-    .history-item {
-      margin-bottom: 10px;
-      padding: 10px;
-      background: #f4f4f4;
-      border-radius: 4px;
-    }
-    .history-item p {
-      margin: 5px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .gallery img {
+            max-width: 90%;
+            height: auto;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Command Interface</h1>
-  <div class="container">
-    <div class="input-container">
-      <input type="text" id="commandInput" placeholder="Enter a command">
-      <button onclick="executeCommand()">Execute</button>
+    <header>
+        <nav>
+            <a href="#">GALLERY</a>
+            <a href="#">INDEX</a>
+            <a href="#">CMND.SERVICES</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="gallery">
+        <img src="image1.jpg" alt="Gallery Image 1">
+        <img src="image2.jpg" alt="Gallery Image 2">
+        <img src="image3.jpg" alt="Gallery Image 3">
+        <img src="image4.jpg" alt="Gallery Image 4">
     </div>
-    <div class="history" id="historyContainer"></div>
-  </div>
 
-  <script>
-    const historyContainer = document.getElementById('historyContainer');
+    <div class="navigation">
+        <a href="#">BACK TO TOP</a>
+    </div>
 
-    function executeCommand() {
-      const commandInput = document.getElementById('commandInput');
-      const command = commandInput.value.trim();
-      if (!command) return;
-
-      // Simulate a response for the entered command
-      const result = `Result for: "${command}"`;
-
-      // Add the command and result to the history
-      const historyItem = document.createElement('div');
-      historyItem.classList.add('history-item');
-      historyItem.innerHTML = `
-        <p><strong>Command:</strong> ${command}</p>
-        <p><strong>Result:</strong> ${result}</p>
-      `;
-      historyContainer.appendChild(historyItem);
-
-      // Clear the input
-      commandInput.value = '';
-    }
-  </script>
+    <footer>
+        &copy; 2025 Portfolio Gallery. All rights reserved.
+    </footer>
 </body>
 </html>
