@@ -3,7 +3,8 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyewon Works</title>
@@ -24,6 +25,18 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+        }
+
+        header .left-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header .right-nav {
+            display: flex;
+            align-items: center;
         }
 
         header a {
@@ -56,12 +69,12 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .navigation a {
             text-decoration: none;
-            color: #333;
+            color: #6D6D6D;
             margin: 0 15px;
         }
 
@@ -73,18 +86,22 @@
             text-align: center;
             margin-top: 40px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #000;
             font-size: 12px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 200;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#">gallery</a>
-            <a href="#">about</a>
-            <a href="#">contact</a>
-        </nav>
+        <div class="left-nav">
+            <a href="#">Home</a>
+        </div>
+        <div class="right-nav">
+            <a href="#">Project</a>
+            <a href="#">About</a>
+        </div>
     </header>
 
     <div class="gallery">
@@ -95,7 +112,7 @@
     </div>
 
     <div class="navigation">
-        <a href="#">BACK TO TOP</a>
+        <a href="#">Back to top</a>
     </div>
 
     <footer>
