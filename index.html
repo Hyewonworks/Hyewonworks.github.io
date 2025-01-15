@@ -55,53 +55,27 @@
             text-decoration: underline;
         }
 
-        .gallery {
+        .home-gallery {
             display: none;
-            flex-direction: column;
-            align-items: flex-start;
+            flex-direction: column; /* 세로 방향 스크롤 */
+            align-items: center;
             margin: 20px;
         }
 
-        .gallery-item {
-            margin-bottom: 20px;
-        }
-
-        .gallery img {
-            max-width: 90%;
-            height: auto;
-            margin: 10px 0;
+        .home-gallery img {
+            width: 650px;
+            height: 650px;
+            object-fit: cover; /* 비율 유지하면서 크기 조정 */
+            margin: 20px 0; /* 이미지 간격 */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
 
-        .gallery .title {
-            font-weight: 600;
-            font-size: 12pt;
-            color: #FFFFFF;
-            margin: 5px 0;
-        }
-
-        .gallery .description {
-            font-weight: 400;
-            font-size: 10pt;
-            color: #D1D1D1;
-            margin: 0;
-        }
-
-        .navigation {
+        .gallery, .navigation {
             display: none;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .navigation a {
-            text-decoration: none;
-            color: #6D6D6D;
-            margin: 0 15px;
-        }
-
-        .navigation a:hover {
-            text-decoration: underline;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px;
         }
 
         footer {
@@ -136,26 +110,7 @@
 
     <!-- Project Gallery Section -->
     <div class="gallery" id="gallery-section">
-        <div class="gallery-item">
-            <img src="images/image1.jpg">
-            <div class="title">프로젝트 제목 1</div>
-            <p class="description">본문 내용 1</p>
-        </div>
-        <div class="gallery-item">
-            <img src="images/image2.jpg">
-            <div class="title">프로젝트 제목 2</div>
-            <p class="description">본문 내용 2</p>
-        </div>
-        <div class="gallery-item">
-            <img src="images/image3.jpg">
-            <div class="title">프로젝트 제목 3</div>
-            <p class="description">본문 내용 3</p>
-        </div>
-        <div class="gallery-item">
-            <img src="images/image4.jpg">
-            <div class="title">프로젝트 제목 4</div>
-            <p class="description">본문 내용 4</p>
-        </div>
+        <!-- 프로젝트 섹션은 이전 설정 유지 -->
     </div>
 
     <div class="navigation" id="navigation-section">
