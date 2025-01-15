@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="favicon image" href="/favicon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Pretendard 폰트 추가 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyewon Works</title>
@@ -27,17 +23,10 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-family: 'Pretendard', sans-serif;
             font-weight: 600;
         }
 
-        header .left-nav {
-            display: flex;
-            align-items: center;
-        }
-
-        header .right-nav {
+        header .left-nav, header .right-nav {
             display: flex;
             align-items: center;
         }
@@ -48,28 +37,47 @@
             font-size: 14px;
             margin: 0 10px;
             cursor: pointer;
-            font-weight: 600;
         }
 
         header a:hover {
             text-decoration: underline;
         }
 
+        .home-gallery {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .home-gallery img {
+            width: 650px;
+            height: 650px;
+            object-fit: cover;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
         .gallery {
             display: none;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center; /* 중앙 정렬 */
             margin: 20px;
         }
 
         .gallery-item {
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column; /* 세로 배치 */
+            align-items: center; /* 중앙 정렬 */
+            margin-bottom: 30px;
+            text-align: center; /* 텍스트 중앙 정렬 */
         }
 
         .gallery img {
             max-width: 90%;
             height: auto;
-            margin: 10px 0;
+            margin-bottom: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
@@ -89,7 +97,7 @@
         }
 
         .navigation {
-            display: none;
+            display: flex;
             justify-content: center;
             margin-top: 20px;
         }
@@ -110,12 +118,11 @@
             padding: 20px;
             background-color: #000;
             font-size: 12px;
-            font-family: 'Pretendard', sans-serif;
             font-weight: 200;
         }
     </style>
 </head>
-<body>
+<body id="top">
     <header>
         <div class="left-nav">
             <a id="home-link">Hyewonworks</a>
@@ -128,38 +135,38 @@
 
     <!-- Home Gallery Section -->
     <div class="home-gallery" id="home-gallery-section">
-        <img src="images/home1.jpg">
-        <img src="images/home2.jpg">
-        <img src="images/home3.jpg">
-        <img src="images/home4.jpg">
+        <img src="images/home1.jpg" alt="Home Image 1">
+        <img src="images/home2.jpg" alt="Home Image 2">
+        <img src="images/home3.jpg" alt="Home Image 3">
+        <img src="images/home4.jpg" alt="Home Image 4">
     </div>
 
     <!-- Project Gallery Section -->
     <div class="gallery" id="gallery-section">
         <div class="gallery-item">
-            <img src="images/image1.jpg">
+            <img src="images/image1.jpg" alt="Project Image 1">
             <div class="title">프로젝트 제목 1</div>
             <p class="description">본문 내용 1</p>
         </div>
         <div class="gallery-item">
-            <img src="images/image2.jpg">
+            <img src="images/image2.jpg" alt="Project Image 2">
             <div class="title">프로젝트 제목 2</div>
             <p class="description">본문 내용 2</p>
         </div>
         <div class="gallery-item">
-            <img src="images/image3.jpg">
+            <img src="images/image3.jpg" alt="Project Image 3">
             <div class="title">프로젝트 제목 3</div>
             <p class="description">본문 내용 3</p>
         </div>
         <div class="gallery-item">
-            <img src="images/image4.jpg">
+            <img src="images/image4.jpg" alt="Project Image 4">
             <div class="title">프로젝트 제목 4</div>
             <p class="description">본문 내용 4</p>
         </div>
     </div>
 
-    <div class="navigation" id="navigation-section">
-        <a href="#header">Back to top</a>
+    <div class="navigation">
+        <a href="#top">Back to top</a>
     </div>
 
     <footer>
@@ -171,34 +178,29 @@
         const projectLink = document.getElementById('project-link');
         const homeGallery = document.getElementById('home-gallery-section');
         const gallerySection = document.getElementById('gallery-section');
-        const navigationSection = document.getElementById('navigation-section');
 
         // Function to hide all sections
         function hideAllSections() {
             homeGallery.style.display = 'none';
             gallerySection.style.display = 'none';
-            navigationSection.style.display = 'none';
         }
 
         // 초기 페이지 로드 시 Home Gallery Section 표시
         window.onload = function() {
             hideAllSections();
             homeGallery.style.display = 'flex';
-            navigationSection.style.display = 'flex';
         };
 
         // Home 메뉴 클릭 이벤트
         homeLink.addEventListener('click', () => {
             hideAllSections();
             homeGallery.style.display = 'flex';
-            navigationSection.style.display = 'flex';
         });
 
         // Project 메뉴 클릭 이벤트
         projectLink.addEventListener('click', () => {
             hideAllSections();
             gallerySection.style.display = 'flex';
-            navigationSection.style.display = 'flex';
         });
     </script>
 </body>
