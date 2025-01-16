@@ -64,60 +64,57 @@
 
         .gallery {
             display: none;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap; /* 가로 정렬을 위한 설정 */
+            justify-content: center; /* 이미지 중앙 정렬 */
+            gap: 20px; /* 이미지 간 간격 */
             margin: 20px;
         }
 
         .gallery-item {
             position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-            text-align: center;
-            overflow: hidden; /* 부모 영역을 넘는 요소 숨김 */
+            width: 580px;
+            height: 580px;
+            overflow: hidden;
         }
 
         .gallery img {
-            width: 650px; /* 변경된 이미지 크기 */
-            height: 650px; /* 변경된 이미지 크기 */
+            width: 100%; /* 부모 크기에 맞춤 */
+            height: 100%;
             object-fit: cover;
-            margin-bottom: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: all 0.3s ease; /* 호버 효과 전환 부드럽게 */
+            transition: opacity 0.3s ease; /* 호버 효과 */
         }
 
         .gallery-item:hover img {
-            filter: brightness(0.45); /* 이미지 어두워짐 */
+            filter: brightness(0.4); /* 호버 시 어두워짐 */
         }
 
         .gallery-item .info {
             position: absolute;
-            bottom: 10px; /* 이미지 하단에서 10px 위 */
-            left: 10px; /* 이미지 좌측에서 10px */
+            bottom: 20px;
+            left: 10px;
             color: #FFFFFF;
             text-align: left;
             z-index: 10;
-            opacity: 0; /* 초기 상태: 숨김 */
-            transition: opacity 0.3s ease; /* 호버 시 나타나는 효과 부드럽게 */
+            opacity: 0; /* 기본적으로 숨김 */
+            transition: opacity 0.3s ease; /* 호버 시 서서히 표시 */
         }
 
         .gallery-item:hover .info {
-            opacity: 1; /* 호버 시 문구 보이기 */
+            opacity: 1; /* 호버 시 표시 */
         }
 
-        .gallery-item .title {
+        .gallery-item .info .title {
             font-weight: 600;
-            margin-bottom: 5px; /* 프로젝트 제목과 설명 사이 여백 */
-            margin-Left: 20px;
+            font-size: 16px;
+            margin-bottom: 5px;
+            margin-Left: 15px;
         }
 
-        .gallery-item .description {
+        .gallery-item .info .description {
             font-weight: 400;
-            margin-bottom: 20px; /* 문구의 하단 여백 추가 */
-            margin-Left: 20px;
+            font-size: 14px;
+            margin-Left: 15px;
+            margin-bottom:15px;
         }
 
         .navigation {
@@ -193,6 +190,20 @@
             <div class="info">
                 <div class="title">프로젝트 제목 4</div>
                 <div class="description">본문 내용 4</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/image5.jpg" alt="Project Image 5">
+            <div class="info">
+                <div class="title">프로젝트 제목 5</div>
+                <div class="description">본문 내용 5</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/image6.jpg" alt="Project Image 6">
+            <div class="info">
+                <div class="title">프로젝트 제목 6</div>
+                <div class="description">본문 내용 6</div>
             </div>
         </div>
     </div>
