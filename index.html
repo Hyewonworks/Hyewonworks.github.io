@@ -60,6 +60,8 @@
             height: 675px; /* 고정된 높이 */
             object-fit: cover; /* 이미지 비율 유지하며 크기 조정 */
             margin: 0 0 20px 0; /* 이미지 간 여백 */
+            transition: transform 1.5s ease, opacity 1.5s ease; /* 스크롤 애니메이션 추가 */
+            opacity: 0; /* 초기 상태에서 보이지 않음 */
         }
 
         .gallery {
@@ -156,10 +158,10 @@
 
     <!-- Home Gallery Section -->
     <div class="home-gallery" id="home-gallery-section">
-        <img src="images/home1.jpg" alt="Home Image 1">
-        <img src="images/home2.jpg" alt="Home Image 2">
-        <img src="images/home3.jpg" alt="Home Image 3">
-        <img src="images/home4.jpg" alt="Home Image 4">
+        <img src="images/home1.jpg" alt="Home Image 1" class="animate">
+        <img src="images/home2.jpg" alt="Home Image 2" class="animate">
+        <img src="images/home3.jpg" alt="Home Image 3" class="animate">
+        <img src="images/home4.jpg" alt="Home Image 4" class="animate">
     </div>
 
     <!-- Project Gallery Section -->
@@ -232,6 +234,25 @@
         window.onload = function() {
             hideAllSections();
             homeGallery.style.display = 'flex';
+
+            // 스크롤 애니메이션 적용
+            const images = document.querySelectorAll('.home-gallery img');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.style.opacity = '1';
+                    } else {
+                        entry.target.style.transform = 'translateY(50px)';
+                        entry.target.style.opacity = '0';
+                    }
+                });
+            });
+
+            images.forEach(img => {
+                img.style.transform = 'translateY(50px)';
+                observer.observe(img);
+            });
         };
 
         // Home 메뉴 클릭 이벤트
