@@ -70,34 +70,54 @@
         }
 
         .gallery-item {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
             text-align: center;
+            overflow: hidden; /* 부모 영역을 넘는 요소 숨김 */
         }
 
         .gallery img {
-            width: 650px;
-            height: 650px;
+            width: 650px; /* 변경된 이미지 크기 */
+            height: 650px; /* 변경된 이미지 크기 */
             object-fit: cover;
             margin-bottom: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            transition: all 0.3s ease; /* 호버 효과 전환 부드럽게 */
         }
 
-        .gallery .title {
-            font-weight: 600;
-            font-size: 12pt;
+        .gallery-item:hover img {
+            filter: brightness(0.6); /* 이미지 어두워짐 */
+        }
+
+        .gallery-item .info {
+            position: absolute;
+            bottom: 10px; /* 이미지 하단에서 10px 위 */
+            left: 10px; /* 이미지 좌측에서 10px */
             color: #FFFFFF;
-            margin: 5px 0;
+            text-align: left;
+            z-index: 10;
+            opacity: 0; /* 초기 상태: 숨김 */
+            transition: opacity 0.3s ease; /* 호버 시 나타나는 효과 부드럽게 */
         }
 
-        .gallery .description {
+        .gallery-item:hover .info {
+            opacity: 1; /* 호버 시 문구 보이기 */
+        }
+
+        .gallery-item .title {
+            font-weight: 600;
+            margin-bottom: 5px; /* 프로젝트 제목과 설명 사이 여백 */
+            margin-Left: 20px;
+        }
+
+        .gallery-item .description {
             font-weight: 400;
-            font-size: 10pt;
-            color: #D1D1D1;
-            margin: 0;
+            margin-bottom: 20px; /* 문구의 하단 여백 추가 */
+            margin-Left: 20px;
         }
 
         .navigation {
@@ -149,23 +169,31 @@
     <div class="gallery" id="gallery-section">
         <div class="gallery-item">
             <img src="images/image1.jpg" alt="Project Image 1">
-            <div class="title">프로젝트 제목 1</div>
-            <p class="description">본문 내용 1</p>
+            <div class="info">
+                <div class="title">프로젝트 제목 1</div>
+                <div class="description">본문 내용 1</div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="images/image2.jpg" alt="Project Image 2">
-            <div class="title">프로젝트 제목 2</div>
-            <p class="description">본문 내용 2</p>
+            <div class="info">
+                <div class="title">프로젝트 제목 2</div>
+                <div class="description">본문 내용 2</div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="images/image3.jpg" alt="Project Image 3">
-            <div class="title">프로젝트 제목 3</div>
-            <p class="description">본문 내용 3</p>
+            <div class="info">
+                <div class="title">프로젝트 제목 3</div>
+                <div class="description">본문 내용 3</div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="images/image4.jpg" alt="Project Image 4">
-            <div class="title">프로젝트 제목 4</div>
-            <p class="description">본문 내용 4</p>
+            <div class="info">
+                <div class="title">프로젝트 제목 4</div>
+                <div class="description">본문 내용 4</div>
+            </div>
         </div>
     </div>
 
