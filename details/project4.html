@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 제목 1</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            margin: 0;
+            color: #B6B6B6;
+            background-color: #000;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #000;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .hero-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+        }
+
+    main {
+        padding: 20px;
+    }
+
+    .content-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .content-section .left-column {
+        flex: 1;
+        max-width: 40%;
+        text-align: left;
+    }
+
+    .content-section .left-column .title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+    .content-section .left-column .subtitle {
+        font-size: 16px;
+        color: #B6B6B6;
+        margin-bottom: 20px;
+    }
+
+    .content-section .right-column {
+        flex: 2;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #B6B6B6;
+        text-align: left;
+    }
+
+    .project-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .project-images .image-container {
+        width: 100%;
+        max-width: 800px; /* 기본 최대 크기 */
+    }
+
+    .project-images .image-container img {
+        width: 100%;
+        height: auto; /* 비율 유지 */
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .project-images .image-container img:hover {
+        transform: scale(1.05);
+    }
+
+    .project-images .image-container.image1 {
+        max-width: 700px; /* 이미지 1 크기 */
+    }
+
+    .project-images .image-container.image2 {
+        max-width: 600px; /* 이미지 2 크기 */
+    }
+
+    .project-images .image-container.image3 {
+        max-width: 750px; /* 이미지 3 크기 */
+    }
+
+    .project-images .image-container.image4 {
+        max-width: 500px; /* 이미지 4 크기 */
+    }
+
+    .project-images .image-container.image5 {
+        max-width: 650px; /* 이미지 5 크기 */
+    }
+
+    .project-images .text-block {
+        font-size: 16px;
+        text-align: center;
+        color: #B6B6B6;
+        max-width: 800px;
+        line-height: 1.6;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+        font-size: 12px;
+        color: #6D6D6D;
+        margin-top: 40px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">← Home</a>
+    </header>
+
+    <main>
+        <!-- Hero Image -->
+        <div class="hero-image-container">
+            <img class="hero-image" src="../images/project1/project-4-hero.jpg" alt="Hero Image">
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="title">프로젝트 이름4<br>ENG Name</div>
+                <div class="subtitle">작업타입,작업년도</div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                프로젝트 한줄 요약<br><br>
+               프로젝트 상세 설명을 적어주세요, 두 줄 정도로 설명을 적어주세요.
+            </div>
+        </div>
+
+        <!-- Project Images Section -->
+        <div class="project-images">
+            <!-- Image 1 -->
+            <img src="../images/project1/project-4-image1.jpg" alt="Project Image 1">
+
+            <!-- Text Block -->
+            <div class="text-block">
+                이미지 1에 대한 설명을 여기에 작성할 수 있습니다. 예를 들어, 프로젝트의 시작 배경이나 기술적인 디테일을 넣어도 좋습니다.
+            </div>
+
+            <!-- Image 2 -->
+            <img src="../images/project1/project-4-image2.jpg" alt="Project Image 2">
+
+               <!-- Text Block -->
+                <div class="text-block">
+                    이미지 3 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
+                </div>
+                
+            <!-- Image 3 -->
+            <img src="../images/project1/project-4-image3.jpg" alt="Project Image 3">
+
+               <!-- Text Block -->
+                <div class="text-block">
+                    이미지 3 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
+                </div>
+
+            <!-- Image 4 -->
+            <img src="../images/project1/project-4-image4.jpg" alt="Project Image 4">
+
+               <!-- Text Block -->
+                <div class="text-block">
+                    이미지 4 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
+                </div>
+
+            <!-- Image 5 -->
+            <img src="../images/project1/project-4-image5.jpg" alt="Project Image 5">
+               <!-- Text Block -->
+                <div class="text-block">
+                    이미지 5 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
+                </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Portfolio Gallery. All rights reserved.
+    </footer>
+</body>
+</html>
