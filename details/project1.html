@@ -124,13 +124,27 @@
         max-width: 650px; /* 이미지 5 크기 */
     }
 
-    .project-images .text-block {
-        font-size: 16px;
-        text-align: left;
-        color: #B6B6B6;
-        max-width: 800px;
-        line-height: 1.6;
-    }
+        .project-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            border-bottom: 1px solid #333; /* 구분선 추가 */
+        }
+
+        .project-section .left-text {
+            font-size: 18px;
+            font-weight: 600; /* 좌측 텍스트 두께 600 */
+            color: #FFFFFF;
+        }
+
+        .project-section .right-text {
+            font-size: 14px;
+            font-weight: 400; /* 우측 텍스트 두께 400 */
+            color: #B6B6B6;
+            text-align: right;
+            line-height: 1.5;
+        }
 
     footer {
         padding: 10px;
@@ -191,6 +205,18 @@
             .project-images .text-block {
                 font-size: 11pt; /* 텍스트 블록 폰트 크기 */
             }
+
+            .project-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-section .right-text {
+                text-align: left;
+            }
+        }
+    </style>
         }
     </style>
 
@@ -227,42 +253,68 @@
         <div class="project-images">
             <!-- Image 1 -->
             <img src="../images/project1/project-1-image1.jpg" alt="Project Image 1">
-
-            <!-- Text Block -->
-            <div class="text-block">
-                이미지 1에 대한 설명을 여기에 작성할 수 있습니다. 예를 들어, 프로젝트의 시작 배경이나 기술적인 디테일을 넣어도 좋습니다.
+        <!-- Project Section -->
+        <div class="project-section">
+            <!-- Left Text -->
+            <div class="left-text">INFORMATION</div>
+            
+            <!-- Right Text -->
+            <div class="right-text">
+                이미지 1에 대한 설명을 여기에 작성할 수 있습니다. 예를 들어, 프로젝트의 시작 배경이나 
+                기술적인 디테일을 넣어도 좋습니다.
             </div>
 
             <!-- Image 2 -->
             <img src="../images/project1/project-1-image2.jpg" alt="Project Image 2">
-
-               <!-- Text Block -->
-                <div class="text-block">
-                    이미지 3 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
-                </div>
+        <!-- Project Section -->
+        <div class="project-section">
+            <!-- Left Text -->
+            <div class="left-text">INFORMATION</div>
+            
+            <!-- Right Text -->
+            <div class="right-text">
+                이미지 1에 대한 설명을 여기에 작성할 수 있습니다. 예를 들어, 프로젝트의 시작 배경이나 
+                기술적인 디테일을 넣어도 좋습니다.
+            </div>
                 
             <!-- Image 3 -->
             <img src="../images/project1/project-1-image3.jpg" alt="Project Image 3">
-
-               <!-- Text Block -->
-                <div class="text-block">
-                    이미지 3 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
-                </div>
+        <!-- Project Section -->
+        <div class="project-section">
+            <!-- Left Text -->
+            <div class="left-text">INFORMATION</div>
+            
+            <!-- Right Text -->
+            <div class="right-text">
+                이미지 1에 대한 설명을 여기에 작성할 수 있습니다. 예를 들어, 프로젝트의 시작 배경이나 
+                기술적인 디테일을 넣어도 좋습니다.
+            </div>
 
             <!-- Image 4 -->
             <img src="../images/project1/project-1-image4.jpg" alt="Project Image 4">
-
-               <!-- Text Block -->
-                <div class="text-block">
-                    이미지 4 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
-                </div>
+        <!-- Project Section -->
+        <div class="project-section">
+            <!-- Left Text -->
+            <div class="left-text">INFORMATION</div>
+            
+            <!-- Right Text -->
+            <div class="right-text">
+                이미지 1에 대한 설명을 여기에 작성할 수 있습니다. 예를 들어, 프로젝트의 시작 배경이나 
+                기술적인 디테일을 넣어도 좋습니다.
+            </div>
 
             <!-- Image 5 -->
             <img src="../images/project1/project-1-image5.jpg" alt="Project Image 5">
-               <!-- Text Block -->
-                <div class="text-block">
-                    이미지 5 이후에 텍스트를 추가하여 프로젝트의 중간 과정을 설명할 수 있습니다.
-                </div>
+        <!-- Project Section -->
+        <div class="project-section">
+            <!-- Left Text -->
+            <div class="left-text">INFORMATION</div>
+            
+            <!-- Right Text -->
+            <div class="right-text">
+                이미지 1에 대한 설명을 여기에 작성할 수 있습니다. 예를 들어, 프로젝트의 시작 배경이나 
+                기술적인 디테일을 넣어도 좋습니다.
+            </div>
             
         </div>
     </main>
