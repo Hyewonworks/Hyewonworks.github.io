@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로젝트 제목 2</title>
+    <title>프로젝트 제목 4</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
         body {
@@ -14,13 +14,12 @@
         }
 
         header {
-            padding: 20px;
+            padding: 40px;
             background-color: #000;
             color: #FFFFFF;
             font-size: 20px;
             font-weight: 600;
             text-align: left;
-            padding-left: 20px; /* 좌측 여백 추가 */
         }
 
         header a {
@@ -28,15 +27,32 @@
             color: #FFFFFF;
         }
 
-        .content-section {
+        .hero-image-container {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-            margin-top: 30px;
-            padding-left: 20px; /* 좌측 여백 추가 */
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
         }
+
+        .hero-image {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+        }
+
+    main {
+        padding: 0px;
+    }
+
+    .content-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 100px;
+        margin-top: 30px;
+        padding-left: 60px;
+    }
 
     .content-section .left-column {
         flex: 1;
@@ -54,7 +70,7 @@
     .content-section .left-column .subtitle {
         font-size: 16px;
         color: #B6B6B6;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .content-section .right-column {
